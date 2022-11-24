@@ -4,7 +4,7 @@ import "../styles/users.scss";
 
 export default function CreateUsers() {
   const [isErr, setIsErr] = useState();
-  const [isLoading, setIsLoading] = useState(null);
+  // const [isLoading, setIsLoading] = useState(null);
 
   const rfCompany = useRef();
   const rfUsername = useRef();
@@ -108,9 +108,9 @@ export default function CreateUsers() {
 
   return (
     <div className="createusers">
-      <h1 className="formheading">Create User</h1>
-
+   
       <form className="form">
+      <h1 className="formheading">Create User</h1>
         <div className="row">
           <div className="company">
             <label>
@@ -230,7 +230,7 @@ export default function CreateUsers() {
           </div>
         </div>
 
-        <input type="submit" value="Submit" handleClick={Create}></input>
+        <input type="submit" value="Submit"></input>
       </form>
       <div className="tablesection">
         <table className="userstable">

@@ -1,108 +1,83 @@
 .createusers{
-  h1{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #0e03a3;
-  
-  }
-.form {
+  background-color: #DDC0B4;
+  margin-bottom: 50px;
+ .form{
+  background-color: #A9A9A9;
+  margin: 30px 200px 0 200px;
   border-radius: 10px;
-  background-color: #ddc0b4;
-  padding: 20px;
-  height: fit-content;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 30px;
-
-  .row {
-    margin-bottom: 30px;
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    select {
-      width: 200px;
+  .row{
+    .company, .username, .email{
+      float: left;
+      width: 25%;
+    }
+  }
+  .row{
+    .firstname, .lastname{
+      float: left;
+      width: 37.5%;
+    }
+  }
+  .row{
+    textarea{
+      float: left;
+      width: 72%;
+      border-radius: 4px;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
       resize: vertical;
     }
-
-    label {
-      font-size: 15px;
-      color: black;
-      font-weight: bold;
-      text-align: left;
-    }
-
-    .company,
-    .username,
-    .email {
+  }
+  .row{
+    .city, .country, .postalcode{
       float: left;
-      width: 33.33%;
+      width: 25%;
     }
-
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-
-    .firstname,
-    .lastname {
+  }
+  .row{
+    .password, .confirmpassword{
       float: left;
-      width: 50%;
+      width: 37.5%;
     }
+  }
 
-    textarea {
-      width: 100%;
-      height: 50px;
-    }
-
-    .city,
-    .country,
-    .postalcode {
-      float: left;
-      width: 33.33%;
-    }
-
-    .password,
-    .confirmpassword {
-      float: left;
-      width: 50%;
-    }
-
-    
-      }
-input[type="submit"] {
-      background-color: #ff8000;
+  .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+   
+    .row {
+          margin-bottom: 30px;
+      
+          input[type="text"],
+          input[type="email"],
+          input[type="password"],
+          select {
+            width: 200px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+          }
+        }
+        label {
+                font-size: 15px;
+                color: black;
+                font-weight: bold;
+                text-align: left;
+              }
+          input[type="submit"] {
+      background-color: #CD853F;
       border: 2px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
       width: 120px;
       height: 40px;
       font-weight: bold;
-    }
-}
-.tablesection{
-  background-color: #a9a9a9;
-  height: fit-content;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 30px;
-  padding-bottom: 0px;
-  border-radius: 5px;
-  overflow-x:auto;
-  color: #FFFFFF;
-  
-  .userstable{
-    width: 100%;
-    border: none;
-    // tbody{
-    //   background-color: #ccc;
-    // }
-  }
- 
-  }
-padding-bottom: 30px;
+    } 
+ }
+ margin-bottom: 50px;
 }
