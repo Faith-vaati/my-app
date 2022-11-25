@@ -23,6 +23,7 @@ export default function Users(){
         }
     );
     const validateForm = () =>{
+        console.log("sdsds")
     let result = true;
     let d = body;
 
@@ -35,7 +36,7 @@ export default function Users(){
 
     updateBody(d);
     setIsErr("");
-    console.log();
+    console.log(body);
 
     if(!body.Fnames){
         result=false;
@@ -95,7 +96,7 @@ export default function Users(){
   <option value="tz">Tanzania</option>
 </select>
 </div>
-<input type="submit" />
+<button onClick={() => {validateForm()}}> Submit</button>
 </form>
     </div>
 </div>
