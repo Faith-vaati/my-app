@@ -107,9 +107,10 @@ export default function CreateUsers() {
   const Create = () => {};
 
   return (
-    <div className="createusers">
-   
-      <form className="form">
+    <div className="createusers">      
+    <form className="form">
+      <div className="row">
+        <div className="formcontent">
       <h1 className="formheading">Create User</h1>
         <div className="row">
           <div className="company">
@@ -229,65 +230,15 @@ export default function CreateUsers() {
             </label>
           </div>
         </div>
-
         <input type="submit" value="Submit"></input>
+        </div>
+        <div className="profilebar">
+        <div className="profile">
+          <h1>Userprofile</h1>
+        </div>
+        </div>
+        </div>
       </form>
-      <div className="tablesection">
-        <table className="userstable">
-          <thead className="tablehead">
-            <th>Company</th>
-            <th>First Name</th>
-            <th>Last name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Country</th>
-            <th>Postal Code</th>
-            <th>Changes</th>
-          </thead>
-          <tbody className="tablebody">
-            <tr>
-              <td>Oka</td>
-              <td>Marion</td>
-              <td>John</td>
-              <td>Mari lane 2</td>
-              <td>Nairobi</td>
-              <td>Kenya</td>
-              <td>00100</td>
-              <td>edit/delete</td>
-            </tr>
-            <tr>
-              <td>Oka</td>
-              <td>Marion</td>
-              <td>John</td>
-              <td>Mari lane 2</td>
-              <td>Nairobi</td>
-              <td>Kenya</td>
-              <td>00100</td>
-              <td>edit/delete</td>
-            </tr>
-            <tr>
-              <td>Oka</td>
-              <td>Marion</td>
-              <td>John</td>
-              <td>Mari lane 2</td>
-              <td>Nairobi</td>
-              <td>Kenya</td>
-              <td>00100</td>
-              <td>edit/delete</td>
-            </tr>
-            <tr>
-              <td>Oka</td>
-              <td>Marion</td>
-              <td>John</td>
-              <td>Mari lane 2</td>
-              <td>Nairobi</td>
-              <td>Kenya</td>
-              <td>00100</td>
-              <td>edit/delete</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
-    </div>
   );
 }
