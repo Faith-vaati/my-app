@@ -1,7 +1,7 @@
 import "./App.scss";
 
 //Importing Pages
-import Users from "./pages/Users";
+import Users from "./pages/CreateUsers";
 
 function App() {
   return (
