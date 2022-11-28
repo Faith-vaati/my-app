@@ -1,13 +1,13 @@
 import "./App.scss";
 
 //Importing Pages
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
       <div className="App-header"></div>
-      <Footer />
+      <Navbar />
     </div>
   );
 }

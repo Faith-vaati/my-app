@@ -1,0 +1,41 @@
+.navbar{
+    background-color: #ddd;
+    height: 100vh;
+    width: fit-content;
+    animation: 1000ms slide;
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+
+    @keyframes slide {
+        from {
+          margin-left: -100%;
+        }
+        to {
+          margin-left: 0%;
+        }
+      }
+    .menu{
+        .navgroup{
+            display: flex;
+            flex-direction: column;
+            padding-right: 1em;
+            .navlink{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                a{
+                text-decoration: none;
+                font-size: 17px;
+                color: black;
+                }
+                a:hover{
+                    background-color: #CD853F;
+                    
+                }
+                  }
+            }
+        }
+    }
+
