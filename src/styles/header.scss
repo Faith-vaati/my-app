@@ -1,0 +1,23 @@
+.header{
+    background-color: #00FFFF;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #000000;
+    .search{
+        input[type="textarea"]{
+            width: 60px;
+            height: 15px;
+        }
+    }
+    // .profile{
+    //     .fa-user{
+    //         width: 80px;
+    //         height: 80px;
+    //     }
+    // }
+}

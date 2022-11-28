@@ -17,10 +17,12 @@
         }
       }
     .menu{
-        .navgroup{
             display: flex;
             flex-direction: column;
-            padding-right: 1em;
+            padding-right: 2em;
+            // text-align: center;
+        .navgroup{
+            
             .navlink{
                 display: flex;
                 flex-direction: column;
