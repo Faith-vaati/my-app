@@ -8,14 +8,14 @@ export default function Navbar(){
             <div className="navgroup">
                 <h4>Home</h4>
                 <div className="navlink">
-                    <a href="./pages/Dashboard">Dashboard</a>
+                    <a href="/">Dashboard</a>
                 </div>
                 <div className="navgroup">
                     <h4>User Details</h4>
                     <div className="navlink">
-                        <a href="./pages/UserProfile">User Profile</a>
-                        <a href="./pages/AddUser">Add User</a>
-                        <a href="./pages/Users">Users</a>
+                        <a href="/profile">User Profile</a>
+                        <a href="/create">Add User</a>
+                        <a href="/users">Users</a>
                     </div>
                 </div>
             </div>
