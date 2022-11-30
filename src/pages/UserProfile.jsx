@@ -109,7 +109,7 @@ export default function UserProfile() {
   return (
     <div className="userprofile">      
     <form className="form">
-      <div className="row">
+      <div className="profileform">
         <div className="formcontent">
       <h1 className="formheading">Create User</h1>
         <div className="row">

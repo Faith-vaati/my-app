@@ -3,8 +3,6 @@ import {Route, Routes, BrowserRouter as Router} from "react-router-dom";
 import "./App.scss";
 
 //Importing Pages
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
 import CreateUsers from "./pages/CreateUsers";
 import Dashboard from "./pages/Dashboard";
 import UserProfile from "./pages/UserProfile";
