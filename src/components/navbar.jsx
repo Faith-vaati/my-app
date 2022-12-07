@@ -16,6 +16,7 @@ export default function Navbar(){
                         <a href="/profile">User Profile</a>
                         <a href="/create">Add User</a>
                         <a href="/users">Users</a>
+                        <a href="/test">Test</a>
                     </div>
                 </div>
             </div>

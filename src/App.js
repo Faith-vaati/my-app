@@ -7,6 +7,8 @@ import CreateUsers from "./pages/CreateUsers";
 import Dashboard from "./pages/Dashboard";
 import UserProfile from "./pages/UserProfile";
 import Users from "./pages/Users";
+import Test from "./pages/Test";
+
 
 
 
@@ -19,6 +21,7 @@ function App() {
         <Route exact path="/create" element={<CreateUsers />} />
         <Route exact path="/profile" element={<UserProfile />} />
         <Route exact path="/users" element={<Users />} />
+        <Route exact path="/test" element={<Test />} />
       </Routes>
     </Router>
   );
