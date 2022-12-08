@@ -8,17 +8,22 @@
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: #000000;
+    .top{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     .search{
         input[type="textarea"]{
             height: 4vh;
         }
-    .fa-search{}
-    margin: 1em;
+    .fa-search{
+    margin: 0.5em;
+}
     }
     // .profile{
-    //     .fa-user{
-    //         width: 80px;
-    //         height: 80px;
+    //     .fa-user-circle{
+           
     //     }
     // }
+}
 }
