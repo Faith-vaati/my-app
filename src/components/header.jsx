@@ -10,7 +10,7 @@ export default function Header(){
             <div className="search">
             <input type="textarea">
             </input>
-                <label>Search</label>
+            <i class="fa fa-search" aria-hidden="true"></i>
             </div>
             {/* <div className="profile">
             <i className="fa-solid fa-user"></i>

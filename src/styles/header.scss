@@ -1,5 +1,5 @@
 .header{
-    background-color: #00FFFF;
+    background-color: #d18835;
     height: 80px;
     display: flex;
     flex-direction: row;
@@ -10,9 +10,10 @@
     color: #000000;
     .search{
         input[type="textarea"]{
-            width: 60px;
-            height: 15px;
+            height: 4vh;
         }
+    .fa-search{}
+    margin: 1em;
     }
     // .profile{
     //     .fa-user{
