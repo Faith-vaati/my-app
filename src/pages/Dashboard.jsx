@@ -2,21 +2,22 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/pages.scss"
-import { useState} from "react";
+import { useRef } from "react";
+
 
 export default function Dashboard(){
-const [test, setTest] = useState('Click Me');
+    const timeref = useRef(0);
 
-function afterClicking(){
-    setTest('I am a Button');
-}
-
+    function afterClicking(){
+        timeref.current = timeref.current + 1;
+        alert('You clicked ' + timeref.current + ' Times')
+    }
     return (
     <div className="dashboard">
         <Header />
         <p>I am a Dashboard</p>
         <div className="statetest">
-            <button onClick={afterClicking}>{test}</button>
+        <button onClick={afterClicking}>Click Me</button>
         </div>
     </div>
     );
