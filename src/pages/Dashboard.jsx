@@ -7,29 +7,60 @@ import { useState } from "react";
 
 
 export default function Dashboard(){
-    const [start, setStart] = useState(0);
-    // const [stop, setStop] = useState();
-    const stopref = useRef(null);
+    function ProductCategoryRow({category}){
+        return(
+           <tr>
+            <th>
+               {category}
+            </th>
+           </tr>
+        );
+    }
 
-   function startTime(){
-    setStart(Date());
-   }
-   function stopTime() {
-   stopref(stopref.curruent);
-   }
+    function ProductRow({product}){
+        const name = product.stocked ? product.name : 
+        <span style={{color: 'red'}}>
+        {product.name}
+        </span>;
 
-   let secondsPassed = 0;
-   if (setStart != null) {
-    secondsPassed = (setStart) / 1000;
-  }
+
+        return(
+         <tr>
+            <td>{name}</td>
+            <td>{product.price}</td>
+         </tr>
+        );
+    }
+     
+    function ProductTable(products){
+      const rows = [];
+      let lastCategory = null;
+
+      products.forEach((product) => {
+        if(product.category !== lastCategory){
+            rows.push(
+              <ProductCategoryRow 
+              category={product.category}
+              key = {product.category}
+              />
+            );
+        }
+        rows.push(
+            <ProductRow
+            product={product}
+            key = {product.name}
+            />
+        );
+         lastCategory=product.category
+      });
+    }
+    
     return (
     <div className="dashboard">
         <Header />
         <p>I am a Dashboard</p>
         <div className="statetest">
-            <h1>Time passed: {secondsPassed.toFixed(3)}</h1>
-       <button onClick={startTime}>Start</button>
-       <button onClick={stopTime}>Stop</button>
+            
         </div>
     </div>
     );
