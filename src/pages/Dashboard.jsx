@@ -6,18 +6,18 @@ import { useRef } from "react";
 
 
 export default function Dashboard(){
-    const timeref = useRef(0);
+    let timeref = useRef(0);
 
-    function afterClicking(){
+    function afterClicking() {
         timeref.current = timeref.current + 1;
-        alert('You clicked ' + timeref.current + ' Times')
+        alert('You clicked me ' + timeref.current +' times');
     }
     return (
     <div className="dashboard">
         <Header />
         <p>I am a Dashboard</p>
         <div className="statetest">
-        <button onClick={afterClicking}>Click Me</button>
+       <button onClick={afterClicking}>Click Me</button>
         </div>
     </div>
     );
