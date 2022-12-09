@@ -53,6 +53,17 @@ export default function Dashboard(){
         );
          lastCategory=product.category
       });
+      return(
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+        </table>
+      );
     }
     
     return (
