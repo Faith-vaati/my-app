@@ -3,21 +3,33 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/pages.scss"
 import { useRef } from "react";
+import { useState } from "react";
 
 
 export default function Dashboard(){
-    let timeref = useRef(0);
+    const [start, setStart] = useState(0);
+    // const [stop, setStop] = useState();
+    const stopref = useRef(null);
 
-    function afterClicking() {
-        timeref.current = timeref.current + 1;
-        alert('You clicked me ' + timeref.current +' times');
-    }
+   function startTime(){
+    setStart(Date());
+   }
+   function stopTime() {
+   stopref(stopref.curruent);
+   }
+
+   let secondsPassed = 0;
+   if (setStart != null) {
+    secondsPassed = (setStart) / 1000;
+  }
     return (
     <div className="dashboard">
         <Header />
         <p>I am a Dashboard</p>
         <div className="statetest">
-       <button onClick={afterClicking}>Click Me</button>
+            <h1>Time passed: {secondsPassed.toFixed(3)}</h1>
+       <button onClick={startTime}>Start</button>
+       <button onClick={stopTime}>Stop</button>
         </div>
     </div>
     );
