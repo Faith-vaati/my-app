@@ -1,6 +1,27 @@
 import React from "react";
 import Header from "../components/Header";
 import "../styles/pages.scss"
+import { useState } from "react";
+
+function FilterableProductTable({ products }) {
+  const [filterText, setFilterText] = useState('');
+  const [inStockOnly, setInStockOnly] = useState(false);
+
+  return (
+    <div>
+      <SearchBar 
+      filterText = {filterText}
+      inStockOnly = {inStockOnly}
+      onfilterTextChange = {setFilterText}
+      oninStockOnlyChange = {setInStockOnly}/>
+      <ProductTable 
+      products={products} 
+      filterText = {filterText}
+      inStockOnly = {inStockOnly} />
+    </div>
+  );
+}
+
 
 
 function ProductCategoryRow({ category }) {
@@ -60,13 +81,20 @@ function ProductCategoryRow({ category }) {
     );
   }
   
-  function SearchBar() {
+  function SearchBar({
+    filterText,
+    inStockOnly,
+    onfilterTextChange,
+    oninStockOnlyChange
+  }) {
     return (
       <form>
-        <input type="text" placeholder="Search..." />
+        <input type="text" value={filterText} placeholder="Search..." 
+        onChange={(e) => onfilterTextChange(e.target.value)}/>
         <br/>
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" value={inStockOnly}
+          onChange={(e) => oninStockOnlyChange(e.target.value)}/>
           {' '}
           Only show products in stock
         </label>
@@ -74,14 +102,7 @@ function ProductCategoryRow({ category }) {
     );
   }
   
-  function FilterableProductTable({ products }) {
-    return (
-      <div>
-        <SearchBar />
-        <ProductTable products={products} />
-      </div>
-    );
-  }
+
   
   const PRODUCTS = [
     {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
